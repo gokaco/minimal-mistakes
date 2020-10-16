@@ -20,7 +20,7 @@ def listen_handler(base, options)
     relative_paths = c.map{ |p| Pathname.new(p).relative_path_from(base).to_s }
     print Jekyll.logger.message("Regenerating:", "#{relative_paths.join(", ")} changed... ")
     begin
-      Jekyll::Command.process_site(site)
+      Jekyll::Command.process_site(site
       puts "regenerated in #{Time.now - t} seconds."
     rescue => e
       puts "error:"
